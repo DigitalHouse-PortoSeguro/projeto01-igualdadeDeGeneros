@@ -5,8 +5,7 @@ public class appMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//Testando alteração de arquivo
-		
+		System.out.println("\n OlÃ¡! Bora testar como estÃ¡ dividida a carga mental na sua casa?!");
 	}
 
 }
