@@ -2,7 +2,7 @@ package igualdadeDeGeneros;
 
 import java.util.List;
 
-public class Quiz implements Perguntas {
+public class Quiz implements Perguntas, InterfaceParticipante {
 	
 	protected List<String> listaPerguntasAlternativas;
 	protected List<String> listaPerguntasSimNao;
