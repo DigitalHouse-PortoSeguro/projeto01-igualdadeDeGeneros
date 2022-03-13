@@ -2,10 +2,9 @@ package igualdadeDeGeneros;
 
 import java.util.Scanner;
 
-public interface InterfaceParticipante {
+public interface InterfaceParticipantes {
 
-	
-	public static void CadastraParticipante() {
+public static void CadastraParticipante() {
 		
 		String genero;
 		String filhos;
