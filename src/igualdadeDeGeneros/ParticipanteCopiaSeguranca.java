@@ -3,7 +3,7 @@ package igualdadeDeGeneros;
 
 import java.util.Scanner;
 
-public class Participante {
+public class ParticipanteCopiaSeguranca {
 	
 	String genero;
 	String filhos;

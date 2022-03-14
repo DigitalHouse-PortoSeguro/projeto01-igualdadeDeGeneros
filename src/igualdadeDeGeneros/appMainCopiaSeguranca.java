@@ -2,7 +2,7 @@ package igualdadeDeGeneros;
 
 import java.util.Scanner;
 
-public class appMain {
+public class appMainCopiaSeguranca {
 
 	public static void main(String[] args) {
 		
