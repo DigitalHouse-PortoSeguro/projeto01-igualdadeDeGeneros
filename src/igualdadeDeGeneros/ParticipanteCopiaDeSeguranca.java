@@ -3,12 +3,12 @@ package igualdadeDeGeneros;
 
 import java.util.Scanner;
 
-public class ParticipanteCopiaSeguranca {
+public class ParticipanteCopiaDeSeguranca {
 	
 	String genero;
 	String filhos;
 	String numeroParticipantes;
-	boolean participanteCadastrado=false;
+	boolean participanteCadastrado=true;
 	
 	public static void CadastraParticipante() {
 

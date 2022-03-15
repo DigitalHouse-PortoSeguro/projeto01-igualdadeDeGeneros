@@ -2,24 +2,28 @@ package igualdadeDeGeneros;
 
 import java.util.Scanner;
 
-public class appMain {
+public class appMain extends Participante {
 
 	public static void main(String[] args) {
 		
-		Participante part = new Participante();
+		
+		cadastroDosUsuarios cadDosUsers = new cadastroDosUsuarios();
 		PopularPerguntas pp = new PopularPerguntas();
 				
 		Scanner ler = new Scanner(System.in);
 		
-		part.CadastraParticipante();//Chamando Método CadastraParticipante
+		cadDosUsers.CadastrarParticipantes();//Chamando Método CadastraParticipante
 		
-		if(part.participanteCadastrado==true)/* Se participanteCadastrado==true linha 11 da Classe Participante, ou seja 
+		/*if(cadDosUsers.isParticipanteCadastrado()==true)/* Se participanteCadastrado==true linha 11 da Classe Participante, ou seja 
 												se o participante ja for cadastrado ele vai para o Menu Principal, mas
 												 se for false ele tem que fazer o cadastro para conseguir jogar.*/
-		{
-		
+	//	{
+			
+					
 		int op=100;
 				
+		
+		
 		do
 		{
 			switch(op)
@@ -27,41 +31,40 @@ public class appMain {
 			case 100://Menu Principal
 			{
 				System.out.println("\nEscolha uma das opções:"
-						        // +"\n(100) Menu Principal"
-								   +"\n(1) Quiz Masculino"
+						           +"\n(1) Quiz Masculino"
 								   +"\n(2) Quiz Feminino"
 								   +"\n(3) Quiz Casal 1"
 								   +"\n(4) Quiz Casal 2"
 								   +"\n(0) Sair");
-				op = ler.nextInt();
+				op = ler.nextInt();//Ler a opção digitada pelo usuário
 				break;
 			}
 			case 1://Quiz Masculino
 			{
-				ler.nextLine();
-				pp.perguntasMasculino1();
-				op=100;		   
+				ler.nextLine();//liapar cache
+				pp.perguntasMasculino1();//Chamando Método perguntasMasculino1 através do objeto pp
+				op=100;	//op recebe 100 para voltar ao Menu Principal	   
 				break;
 			}
 			case 2: //Quiz Feminino
 			{
-				ler.nextLine();
-				pp.perguntasFeminino1();
-				op=100;
+				ler.nextLine();//liapar cache
+				pp.perguntasFeminino1();//Chamando Método perguntasFeminino1 através do objeto pp
+				op=100;//op recebe 100 para voltar ao Menu Principal	
 				break;
 			}
 			case 3: //Quiz Casal 1
 			{
-				ler.nextLine();
-				pp.perguntasCasal1();
-				op=100;
+				ler.nextLine();//liapar cache
+				pp.perguntasCasal1();//Chamando Método perguntasCasal1 através do objeto pp
+				op=100;//op recebe 100 para voltar ao Menu Principal	
 				break;
 			}
 			case 4://QuizTeste Casal 2
 			{
-				ler.nextLine();
-				pp.perguntasCasal2();
-				op=100;
+				ler.nextLine();//liapar cache
+				pp.perguntasCasal2();//Chamando Método perguntasCasal2 através do objeto pp
+				op=100;//op recebe 100 para voltar ao Menu Principal	
 				break;
 			}
 			case 0://Para Sair do Programa
@@ -76,5 +79,11 @@ public class appMain {
 		
 		System.out.println("\n Obrigado por se tornar uma pessoa cada vez melhor! Cotinue sempre assim!");
 		}
+//	}
+
+	@Override
+	public void CadastrarParticipantes() {
+		// TODO Auto-generated method stub
+		
 	}
 }
