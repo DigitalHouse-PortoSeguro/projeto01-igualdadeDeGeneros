@@ -14,28 +14,21 @@ public class appMain extends Participante {
 		
 		cadDosUsers.CadastrarParticipantes();//Chamando Método CadastraParticipante
 		
-		/*if(cadDosUsers.isParticipanteCadastrado()==true)/* Se participanteCadastrado==true linha 11 da Classe Participante, ou seja 
-												se o participante ja for cadastrado ele vai para o Menu Principal, mas
-												 se for false ele tem que fazer o cadastro para conseguir jogar.*/
-	//	{
-			
-					
 		int op=100;
 				
-		
-		
 		do
 		{
 			switch(op)
 			{
 			case 100://Menu Principal
-			{
-				System.out.println("\nEscolha uma das opções:"
+			{	System.out.println("----------------------------------------------------------------");
+				System.out.println("   Para iniciar o seu jogo\nescolha uma das opções abaixo:\n"
 						           +"\n(1) Quiz Masculino"
 								   +"\n(2) Quiz Feminino"
 								   +"\n(3) Quiz Casal 1"
 								   +"\n(4) Quiz Casal 2"
 								   +"\n(0) Sair");
+				System.out.println("----------------------------------------------------------------");
 				op = ler.nextInt();//Ler a opção digitada pelo usuário
 				break;
 			}
@@ -79,11 +72,9 @@ public class appMain extends Participante {
 		
 		System.out.println("\n Obrigado por se tornar uma pessoa cada vez melhor! Cotinue sempre assim!");
 		}
-//	}
 
 	@Override
 	public void CadastrarParticipantes() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Testtando para ver se acontece alguma coisa");
 	}
 }

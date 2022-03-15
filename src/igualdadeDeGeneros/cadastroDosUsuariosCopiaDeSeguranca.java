@@ -3,7 +3,7 @@ package igualdadeDeGeneros;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class cadastroDosUsuarios extends Participante {
+public class cadastroDosUsuariosCopiaDeSeguranca extends Participante {
 
 /*  Método add – Adiciona um elemento no final do ArrayList.
 	Método clear – Remove todos os elementos da estrutura.
