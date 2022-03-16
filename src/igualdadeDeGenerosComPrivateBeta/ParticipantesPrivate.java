@@ -1,4 +1,4 @@
-package igualdadeDeGenerosComPrivate;
+package igualdadeDeGenerosComPrivateBeta;
 
 import java.util.ArrayList;
 import java.util.Scanner;
