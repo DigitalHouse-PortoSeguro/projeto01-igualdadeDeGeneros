@@ -1,22 +1,17 @@
-package igualdadeDeGeneros;
+package igualdadeDeGenerosComInterfaces;
 
 import java.util.Scanner;
 
-public class appMainCopiaDeSeguranca {
+public class appMain extends BaseCadastroDosUsuarios implements InterfacesParticipantes{
 
 	public static void main(String[] args) {
-		
-		Participante part = new Participante();
+				
+		Usuarios cadDosUsers = new Usuarios();
 		PopularPerguntas pp = new PopularPerguntas();
 				
 		Scanner ler = new Scanner(System.in);
 		
-		part.CadastraParticipante();//Chamando Método CadastraParticipante
-		
-		if(part.participanteCadastrado==true)/* Se participanteCadastrado==true linha 11 da Classe Participante, ou seja 
-												se o participante ja for cadastrado ele vai para o Menu Principal, mas
-												 se for false ele tem que fazer o cadastro para conseguir jogar.*/
-		{
+		cadDosUsers.CadastrarParticipantes();//Chamando Método CadastraParticipante
 		
 		int op=100;
 				
@@ -25,13 +20,14 @@ public class appMainCopiaDeSeguranca {
 			switch(op)
 			{
 			case 100://Menu Principal
-			{
-				System.out.println("\nEscolha uma das opções:"
+			{	System.out.println("----------------------------------------------------------------");
+				System.out.println("   Para iniciar o seu jogo\nescolha uma das opções abaixo:\n"
 						           +"\n(1) Quiz Masculino"
 								   +"\n(2) Quiz Feminino"
 								   +"\n(3) Quiz Casal 1"
 								   +"\n(4) Quiz Casal 2"
 								   +"\n(0) Sair");
+				System.out.println("----------------------------------------------------------------");
 				op = ler.nextInt();//Ler a opção digitada pelo usuário
 				break;
 			}
@@ -73,7 +69,11 @@ public class appMainCopiaDeSeguranca {
 		}
 		while(op!=0);//Se for igual a zero, termina/finaliza o programa
 		
-		System.out.println("\n Obrigado por se tornar uma pessoa cada vez melhor! Cotinue sempre assim!");
+		System.out.println("\n Obrigado por se tornar uma pessoa cada vez melhor! Continue sempre assim!");
 		}
+
+	@Override
+	public void CadastrarParticipantes() {
+		System.out.println("Testtando para ver se acontece alguma coisa");
 	}
 }

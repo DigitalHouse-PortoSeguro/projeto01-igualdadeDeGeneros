@@ -1,4 +1,4 @@
-package igualdadeDeGeneros;
+package igualdadeDeGenerosComPrivate;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -126,7 +126,7 @@ public class PopularPerguntas {
 		perguntasCasal1.add("(6) Você envolve o parceiro na gestão da casa, permitindo que ele se responsabilize por parte desta tarefa (gestão financeira do lar, gestão da alimentaçãoo da familia, gestão da vida escolar dos filhos...)");
 		perguntasCasal1.add("(7) Em um momento de explosão da sua parceira, você já respondeu às queixas de sobrecarga nas tarefas com a frase 'Mas era só pedir'? ");
 		
-			System.out.println("\nQuiz Feminino");
+			System.out.println("\nQuiz Casal 1");
 			System.out.println("\n\t****Responda às perguntas a seguir com (S) Sim ou (N) Não****\n");
 		
 			//Perguntas

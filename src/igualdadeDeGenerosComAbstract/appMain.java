@@ -1,12 +1,11 @@
-package igualdadeDeGeneros;
+package igualdadeDeGenerosComAbstract;
 
 import java.util.Scanner;
 
-public class appMain extends Participante {
+public class appMain extends ParticipantesAbstract {
 
 	public static void main(String[] args) {
-		
-		
+				
 		cadastroDosUsuarios cadDosUsers = new cadastroDosUsuarios();
 		PopularPerguntas pp = new PopularPerguntas();
 				
@@ -70,7 +69,7 @@ public class appMain extends Participante {
 		}
 		while(op!=0);//Se for igual a zero, termina/finaliza o programa
 		
-		System.out.println("\n Obrigado por se tornar uma pessoa cada vez melhor! Cotinue sempre assim!");
+		System.out.println("\n Obrigado por se tornar uma pessoa cada vez melhor! Continue sempre assim!");
 		}
 
 	@Override

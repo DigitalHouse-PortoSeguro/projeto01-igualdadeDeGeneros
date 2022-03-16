@@ -1,9 +1,9 @@
-package igualdadeDeGeneros;
+package igualdadeDeGenerosComAbstract;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class cadastroDosUsuarios extends Participante {
+public class cadastroDosUsuarios extends ParticipantesAbstract {
 
 /*  Método add – Adiciona um elemento no final do ArrayList.
 	Método clear – Remove todos os elementos da estrutura.
@@ -19,30 +19,29 @@ public class cadastroDosUsuarios extends Participante {
 	public void CadastrarParticipantes() {
 						
 		Scanner ler = new Scanner(System.in);
-				
+		
 		email.add("joaodasilva@gmail.com");//Já cadastrado
-		senha.add("111111");//Já cadastrado
-		nome.add("joao da silva");//Já cadastrado
-		genero.add("masculino");//Já cadastrado
-		filhos.add("s");//Já cadastrado
-				
 		email.add("carlarodrigues@gmail.com");//Já cadastrado
-		senha.add("222222");//Já cadastrado
+		senha.add(1111);//Já cadastrado
+		senha.add(2222);//Já cadastrado
+		nome.add("joao da silva");//Já cadastrado
 		nome.add("carla rodrigues");//Já cadastrado
+		genero.add("masculino");//Já cadastrado
 		genero.add("feminino");//Já cadastrado
-		filhos.add("n");//Já cadastrado
-				
+		filhos.add("s");//Já cadastrado
+		filhos.add("n");//Já cadastrado		
+		
 		System.out.println("\n OlÁ Bora testar como está dividida a carga mental na sua casa?");
 		System.out.println("\nFaça o seu login");
 			
-		System.out.println("Login: ");
+		System.out.println("Login: ");//Digitar login(email)
 		login = ler.nextLine();
 		login = login.toLowerCase();
 				
-		System.out.println("Senha: ");
+		System.out.println("Senha: ");//Digitar senha
 		int verfSenha = ler.nextInt();
-				
-		if(email.contains(login)!=true && senha.contains(verfSenha)!=true)
+			
+		if(email.contains(login)!=true || senha.contains(verfSenha)!=true)
 		{
 			ler.nextLine();
 			System.out.println("\n\tVocê ainda não possui cadastro!\nPara efetuar o seu cadastro prencha os dados abaixo:\n");
@@ -61,7 +60,7 @@ public class cadastroDosUsuarios extends Participante {
 				{
 					//add senhas no ArraList
 					System.out.println("Digite a sua senha: ");
-					String entSenhas = ler.nextLine();
+					int entSenhas = ler.nextInt();
 					senha.add(entSenhas);
 				}
 				else if(i==2)

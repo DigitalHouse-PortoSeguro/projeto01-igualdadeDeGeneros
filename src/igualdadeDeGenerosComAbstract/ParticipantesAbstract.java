@@ -1,24 +1,24 @@
-package igualdadeDeGeneros;
+package igualdadeDeGenerosComAbstract;
 
 import java.util.ArrayList;
 
-abstract class Participante {
+abstract class ParticipantesAbstract {
 	
 	/*Todos esses Atributos estão com os modificadores de acesso como default, ou seja, serão vistos na mesma classe, qualquer
 	classe no mesmo pacote ou qualquer classe filha no mesmo pacote.*/
 	 String login;//Nesse caso vamos utilizar o email ou CPF 
-	 ArrayList<String> email = new ArrayList<String>();
+	 ArrayList<String> email = new ArrayList<>();
 	 ArrayList<String> nome = new ArrayList<String>();
-	 ArrayList<String> senha = new ArrayList<String>();
+	 ArrayList<Integer> senha = new ArrayList<Integer>();
 	 ArrayList<String> genero = new ArrayList<String>();
 	 ArrayList<String> filhos = new ArrayList<String>();
 		 	 
 	//Um Método Especial Construtor vazio --> É considerado uma BOA PRÁTICA
-	public Participante() {	}
+	public ParticipantesAbstract() {	}
 	
 	//Método Especial Construtor
-	public Participante(String login, ArrayList<String> email, ArrayList<String> nome, ArrayList<String> senha,
-			ArrayList<String> genero, ArrayList<String> filhos) {
+	public ParticipantesAbstract(String login, ArrayList<String> email, ArrayList<String> nome,
+			ArrayList<Integer> senha, ArrayList<String> genero, ArrayList<String> filhos) {
 		super();
 		this.login = login;
 		this.email = email;
@@ -53,11 +53,11 @@ abstract class Participante {
 		this.nome = nome;
 	}
 
-	public ArrayList<String> getSenha() {
+	public ArrayList<Integer> getSenha() {
 		return senha;
 	}
 
-	public void setSenha(ArrayList<String> senha) {
+	public void setSenha(ArrayList<Integer> senha) {
 		this.senha = senha;
 	}
 
@@ -78,6 +78,7 @@ abstract class Participante {
 	}
 	
 	//Método para ser implementado na Classe cadastroDosUsuarios
-		public abstract void CadastrarParticipantes();
+	public abstract void CadastrarParticipantes();
+
 }
 

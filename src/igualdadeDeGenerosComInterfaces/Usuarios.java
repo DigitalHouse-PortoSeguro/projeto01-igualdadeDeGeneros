@@ -1,11 +1,10 @@
-package igualdadeDeGeneros;
+package igualdadeDeGenerosComInterfaces;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class cadastroDosUsuariosCopiaDeSeguranca extends Participante {
+public class Usuarios extends BaseCadastroDosUsuarios implements InterfacesParticipantes {
 
-/*  Método add – Adiciona um elemento no final do ArrayList.
+	/*  Método add – Adiciona um elemento no final do ArrayList.
 	Método clear – Remove todos os elementos da estrutura.
 -->	Método contains – Verifica se o ArrayList contém um elemento especificado, e retorna true em caso positivo, ou false caso contrário.
 	Método get – Retorna o item em uma posição de índice especificada.
@@ -19,73 +18,73 @@ public class cadastroDosUsuariosCopiaDeSeguranca extends Participante {
 	public void CadastrarParticipantes() {
 						
 		Scanner ler = new Scanner(System.in);
-				
+		
 		email.add("joaodasilva@gmail.com");//Já cadastrado
-		senha.add("111111");//Já cadastrado
-		nome.add("joao da silva");//Já cadastrado
-		genero.add("masculino");//Já cadastrado
-		filhos.add("s");//Já cadastrado
-				
 		email.add("carlarodrigues@gmail.com");//Já cadastrado
-		senha.add("222222");//Já cadastrado
+		senha.add(1111);//Já cadastrado
+		senha.add(2222);//Já cadastrado
+		nome.add("joao da silva");//Já cadastrado
 		nome.add("carla rodrigues");//Já cadastrado
+		genero.add("masculino");//Já cadastrado
 		genero.add("feminino");//Já cadastrado
-		filhos.add("n");//Já cadastrado
-				
+		filhos.add("s");//Já cadastrado
+		filhos.add("n");//Já cadastrado		
+		
 		System.out.println("\n OlÁ Bora testar como está dividida a carga mental na sua casa?");
 		System.out.println("\nFaça o seu login");
 			
-		System.out.println("Login: ");
+		System.out.println("Login: ");//Digitar login(email)
 		login = ler.nextLine();
 		login = login.toLowerCase();
 				
-		System.out.println("Senha: ");
+		System.out.println("Senha: ");//Digitar senha
 		int verfSenha = ler.nextInt();
-				
-		if(email.contains(login)!=true && senha.contains(verfSenha)!=true)
+			
+		if(super.email.contains(login)!=true || super.senha.contains(verfSenha)!=true)
 		{
-			ler.nextLine();
+			ler.nextLine();//limpar cache
 			System.out.println("\n\tVocê ainda não possui cadastro!\nPara efetuar o seu cadastro prencha os dados abaixo:\n");
 			
 			for(int i=0;i<=4;i++)
 			{
 				if(i==0)
 				{
-					//add emails no ArraList
+					//add emails no ArrayList
 					System.out.println("Digite o seu email: ");
 					String entEmails = ler.nextLine();
 					entEmails = entEmails.toLowerCase();
-					email.add(entEmails);
+					super.email.add(entEmails);
 				}
 				else if(i==1) 
 				{
-					//add senhas no ArraList
+					//add senhas no ArrayList
 					System.out.println("Digite a sua senha: ");
-					String entSenhas = ler.nextLine();
-					senha.add(entSenhas);
+					int entSenhas = ler.nextInt();
+					super.senha.add(entSenhas);
 				}
 				else if(i==2)
-				{
-					//add nomes no ArraList
+				{	
+					//add nomes no ArrayList
+					ler.nextLine();//limpar cache
 					System.out.println("Digite o seu nome: ");
 					String entNomes = ler.nextLine();
 					entNomes = entNomes.toLowerCase();
-					nome.add(entNomes);
+					super.nome.add(entNomes);
 				}
 				else if(i==3)
 				{
-					//add genero no ArraList
+					//add genero no ArrayList
 					System.out.println("Qual o seu genero (M) Masculino (F) Feminino (O) Outros");
 					String entGeneros = ler.nextLine();
 					entGeneros = entGeneros.toLowerCase();
-					genero.add(entGeneros);
+					super.genero.add(entGeneros);
 				}
 				else if(i==4)
 				{
-					//add filhos no ArraList
+					//add filhos no ArrayList
 					System.out.println("Você tem filho(s): (S) Sim ou (N) Não ");
 					String entFilhos = ler.nextLine();
-					filhos.add(entFilhos);
+					super.filhos.add(entFilhos);
 				}
 			}
 			
@@ -94,9 +93,5 @@ public class cadastroDosUsuariosCopiaDeSeguranca extends Participante {
 		}
 	
 	}
-}
-		
-
-
-
 	
+}
